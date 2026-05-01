@@ -1,12 +1,10 @@
 # 💼 Vineeth Portfolio Website
 
-A modern and responsive personal portfolio website built to showcase my skills, projects, and contact information as a Java Developer.
+A modern and responsive personal  website built to showcase my skills, projects, and contact information as a Java Developer.
 
 ---
 
-## 🚀 Live Website
 
-👉 https://vineeth-portfolio.netlify.app
 
 ---
 
