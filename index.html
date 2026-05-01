@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vineeth | Java Developer</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #020617;
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO SECTION (FIXED IMAGE) */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('tech-bg.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+/* DARK OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+/* CONTENT ABOVE IMAGE */
+.hero-content {
+    position: relative;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 50px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Vineeth</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Hi, I'm <span>Vineeth</span></h2>
+        <p>Java Developer | Building real-world projects</p>
+        <a href="mailto:vineethtumati@gmail.com" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a passionate Java developer learning OOP concepts, building projects, and improving my problem-solving skills every day.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="cards">
+        <div class="card">Java</div>
+        <div class="card">OOP Concepts</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">Problem Solving</div>
+        <div class="card">SQL</div>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Payment System</h3>
+            <p>Interface-based payment system project</p>
+        </div>
+        <div class="card">
+            <h3>Bank System</h3>
+            <p>Encapsulation-based banking system</p>
+            <a href="https://github.com/vineethtumati-dot" target="_blank">View Code</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <a href="mailto:vineethtumati@gmail.com" class="btn">Email Me</a>
+    <br><br>
+    <a href="https://www.linkedin.com/in/tumati-vineeth-8347b035a/" target="_blank" class="btn">
+        LinkedIn Profile
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Vineeth</p>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if(top < window.innerHeight - 50){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
